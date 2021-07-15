@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
+
+  static final String pageName = 'MyHomePage';
+
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -13,7 +16,7 @@ class MyHomePage extends StatefulWidget {
   // always marked "final".
 
   final String title;
-
+  
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
