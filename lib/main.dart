@@ -1,3 +1,4 @@
+import 'package:authentication_template/pages/auth_page.dart';
 import 'package:authentication_template/pages/my_home.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         pages: [
           MaterialPage(
               key: ValueKey(MyHomePage.pageName),
-              child: MyHomePage(title: 'Flutter Demo Home Page'))
+              child: MyHomePage(title: 'Flutter Demo Home Page')),
+          AuthPage(),
         ],
         onPopPage: (route, result) {
           if(!route.didPop(result)) {
