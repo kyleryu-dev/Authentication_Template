@@ -1,4 +1,7 @@
+import 'package:authentication_template/pages/auth_page.dart';
+import 'package:authentication_template/pages/page_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   static final String pageName = 'MyHomePage';
@@ -47,6 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        actions: [
+          IconButton(icon: Icon(Icons.logout), onPressed: (){
+            Provider.of<PageNotifier>(context, listen: false).goToOtherPage(AuthPage.pageName);
+          })
+        ],
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
